@@ -5,6 +5,7 @@ import math
 import wave
 import os
 import struct
+import matplotlib.pyplot as plt
 
 def note_detect(audio_file):
 
@@ -14,21 +15,32 @@ def note_detect(audio_file):
 	file_length=audio_file.getnframes() 
 	f_s=audio_file.getframerate() #sampling frequency
 	sound = np.zeros(file_length) #blank array
-	
+
+
+
 	for i in range(file_length) : 
-		data=audio_file.readframes(1)
-		data=struct.unpack("<h",data)
+		wdata=audio_file.readframes(1)
+		data=struct.unpack("<h",wdata)
 		sound[i] = int(data[0])
+	
+	plt.plot(sound)
+	plt.show()
 	
 	sound=np.divide(sound,float(2**15)) #scaling it to 0 - 1
 	counter = audio_file.getnchannels() #number of channels mono/sterio
 	#-------------------------------------------
 	
+	plt.plot(sound)
+	plt.show()
+
 	#fourier transformation from numpy module
 	fourier = np.fft.fft(sound)
 	fourier = np.absolute(fourier)
-	imax=np.argmax(fourier[0:file_length/2]) #index of max element
+	imax=np.argmax(fourier[0:int(file_length/2)]) #index of max element
 		
+	plt.plot(fourier)
+	plt.show()
+
 	#peak detection
 	i_begin = -1
 	threshold = 0.3 * fourier[imax]
@@ -69,7 +81,7 @@ def note_detect(audio_file):
 if __name__ == "__main__":
 
 	path = os.getcwd()
-	file_name = path + "\file_name.wav"
+	file_name = path + "/d2.wav"
 	audio_file = wave.open(file_name)
 	Detected_Note = note_detect(audio_file)
 	print("\n\tDetected Note = " + str(Detected_Note))
