@@ -11,22 +11,22 @@ Note that: This program can only be used for detecting a single note from a give
 <hr>
 <h4> Raw Music file(Piano C4):</h4> 
 
-![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/Pino_C.png)
+![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/img/Pino_C.png)
 
 <h4>After Applying Normalisation:</h4>
 
-![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/Normalise.png)
+![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/img/Normalise.png)
 
 - Applying Fast Fourier transformation on Note C4:
 
-![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/F_C4.png)
+![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/img/F_C4.png)
 - Applying Fast Fourier transformation on Note C2:
 
-![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/F_C2.png)
+![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/img/F_C2.png)
 
 - Applying Fast Fourier transformation on Note C6:
 
-![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/F_C6.png)
+![alt img](https://github.com/Amagnum/Music-notes-detection/blob/master/img/F_C6.png)
 
 <h3>Run Code: <h3>
 
