@@ -31,5 +31,5 @@ Note that: This program can only be used for detecting a single note from a give
 <h3>Run Code: <h3>
 
 ```
-python music_notes_detection.py
+$ python music_notes_detection.py
 ```
