@@ -33,3 +33,8 @@ Note that: This program can only be used for detecting a single note from a give
 ```
 $ python music_notes_detection.py
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Amagnum/Music-notes-detection&type=Date)](https://star-history.com/#Amagnum/Music-notes-detection&Date)
+
